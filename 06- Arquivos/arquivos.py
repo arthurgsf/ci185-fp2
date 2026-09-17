@@ -1,5 +1,6 @@
-arquivo = open("teste.txt", "r")
-txt = arquivo.read()
-arquivo.close()
+import csv
 
-print(txt)
+with open("teste.csv", "r", encoding="utf-8") as file:
+    leitor = csv.reader(file)
+    for linha in leitor:
+        print(linha) # Retorna uma lista por linha
